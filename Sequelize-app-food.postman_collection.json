@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "016cf52b-916e-4c40-bb00-fbb2ba0cba55",
+		"name": "Sequelize-app-food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23648968"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "likeRestaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/user/likeRestaurant/5",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"likeRestaurant",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unlikeRestaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/user/unlikeRestaurant/3",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"unlikeRestaurant",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRestaurantFavorite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/user/getRestaurantFavorite/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"getRestaurantFavorite",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRestaurantRate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/user/getRestaurantRate/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"getRestaurantRate",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rateRestaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/user/rateRestaurant/3",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"rateRestaurant",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 3,\r\n    \"food_id\": 6,\r\n    \"amount\": 2,\r\n    \"code\": \"\",\r\n    \"arr_sub_id\": [1, 4, 7]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user/order",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "food",
+			"item": [
+				{
+					"name": "getUserLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/food/getUserLike/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"food",
+								"getUserLike",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserRate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/food/getUserRate/3",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"food",
+								"getUserRate",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
